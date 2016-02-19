@@ -3,4 +3,4 @@ target/*
 .settings/*
 .setting/*
 /target
-/bin
+bin/*
