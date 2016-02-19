@@ -1,0 +1,133 @@
+18 Feb 2016 13:04:42 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:04:42 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:05:05 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:05:05 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:05:19 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:05:19 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:05:38 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:06:02 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:06:02 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:06:31 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:06:31 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:08:33 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:08:33 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:09:30 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:09:30 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:11:40 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:11:40 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:12:28 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:12:28 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:13:01 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:13:01 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:13:56 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:13:56 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:14:39 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:14:39 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:15:10 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:15:10 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:16:16 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:16:16 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:20:52 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:20:52 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:20:52 [AWT-EventQueue-0] ERROR org.cerrid.main.MarkitHubUI  -  :: ERROR - Could not find File Path required to run program , check whether file path argument is present when running jar,If running jar from other program please make your you have added file path argument  
+18 Feb 2016 13:21:12 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:21:12 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:21:13 [AWT-EventQueue-0] ERROR org.cerrid.main.MarkitHubUI  -  :: ERROR - Could not find File Path required to run program , check whether file path argument is present when running jar,If running jar from other program please make your you have added file path argument  
+18 Feb 2016 13:22:18 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:22:18 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:22:18 [AWT-EventQueue-0] ERROR org.cerrid.main.MarkitHubUI  -  :: ERROR - Could not find File Path required to run program , check whether file path argument is present when running jar,If running jar from other program please make your you have added file path argument  
+18 Feb 2016 13:22:48 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:22:48 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:22:48 [AWT-EventQueue-0] ERROR org.cerrid.main.MarkitHubUI  -  :: ERROR - Could not find File Path required to run program , check whether file path argument is present when running jar,If running jar from other program please make your you have added file path argument  
+18 Feb 2016 13:23:07 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:23:07 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 13:30:20 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 13:30:20 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 14:18:18 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : abc
+18 Feb 2016 14:18:18 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 14:18:18 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 14:53:36 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 14:53:36 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : abc bec
+18 Feb 2016 14:53:36 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 14:53:36 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 14:54:02 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 14:54:02 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 14:54:02 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 14:54:02 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 15:23:33 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 15:23:33 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 15:24:05 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 15:24:05 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:03:54 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:03:54 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:03:55 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:03:55 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:04:28 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:04:28 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:04:28 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:04:28 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:05:04 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:05:04 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:05:04 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:05:04 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:06:16 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:06:16 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:06:16 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:06:16 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:09:03 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:09:03 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:09:03 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:09:03 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:09:15 [AWT-EventQueue-0] INFO  org.cerrid.controller.AutomationController  - :: Entered in controller 
+18 Feb 2016 16:09:15 [AWT-EventQueue-0] INFO  org.cerrid.excelAutomation.CopyValues  - ## copyDataFromExcel method
+18 Feb 2016 16:09:15 [AWT-EventQueue-0] ERROR org.cerrid.excelAutomation.CopyValues  - java.io.FileNotFoundException: abc bec (The system cannot find the file specified)
+18 Feb 2016 16:09:41 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:09:41 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:09:42 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:09:42 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:11:11 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:11:11 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:11:12 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:11:12 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:11:14 [AWT-EventQueue-0] INFO  org.cerrid.controller.AutomationController  - :: Entered in controller 
+18 Feb 2016 16:11:14 [AWT-EventQueue-0] INFO  org.cerrid.excelAutomation.CopyValues  - ## copyDataFromExcel method
+18 Feb 2016 16:11:14 [AWT-EventQueue-0] ERROR org.cerrid.excelAutomation.CopyValues  - java.io.FileNotFoundException: abc bec (The system cannot find the file specified)
+18 Feb 2016 16:11:31 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 16:11:31 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 16:11:31 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 16:11:31 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 16:11:50 [AWT-EventQueue-0] INFO  org.cerrid.controller.AutomationController  - :: Entered in controller 
+18 Feb 2016 16:11:50 [AWT-EventQueue-0] INFO  org.cerrid.excelAutomation.CopyValues  - ## copyDataFromExcel method
+18 Feb 2016 16:11:50 [AWT-EventQueue-0] ERROR org.cerrid.excelAutomation.CopyValues  - java.io.FileNotFoundException: abc bec (The system cannot find the file specified)
+18 Feb 2016 18:45:37 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 18:45:37 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 18:45:38 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 18:45:38 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 18:55:42 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 18:55:42 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 18:55:42 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 18:55:42 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 18:56:16 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 18:56:16 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 18:56:16 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 18:56:16 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 19:01:11 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+18 Feb 2016 19:01:11 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'abc bec'
+18 Feb 2016 19:01:11 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 19:01:11 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 19:03:02 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS1
+18 Feb 2016 19:03:02 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'D:\CDS_RiskCalcs.xlsm'
+18 Feb 2016 19:03:03 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 19:03:03 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+18 Feb 2016 19:03:53 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS1
+18 Feb 2016 19:03:53 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'D:\CDS_RiskCalkkcs.xlsm'
+18 Feb 2016 19:03:53 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+18 Feb 2016 19:03:53 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+19 Feb 2016 13:01:43 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS1
+19 Feb 2016 13:01:43 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'D:\CDS_RiskCalkkcs.xlsm'
+19 Feb 2016 13:01:43 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+19 Feb 2016 13:01:43 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+19 Feb 2016 13:20:56 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS1
+19 Feb 2016 13:20:56 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'D:\CDS_RiskCalkkcs.xlsm'
+19 Feb 2016 13:20:56 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
+19 Feb 2016 13:20:56 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
