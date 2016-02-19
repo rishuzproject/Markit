@@ -321,7 +321,7 @@ public class MarkitHubUI extends javax.swing.JFrame {
 
 		if (args.length > 0) {
 			filePath = new StringBuilder();
-			if (args.length > 1) {
+			if (args.length > 2) {
 				for (int i = 0; i < args.length - 1; i++) {
 					filePath.append(args[i]);
 					filePath.append(" ");
@@ -330,8 +330,10 @@ public class MarkitHubUI extends javax.swing.JFrame {
 			} else {
 				filePath.append(args[0]);
 			}
-			rowCount = Integer.parseInt(args[args.length - 1]);
-			logger.info(" :: ARGS" + args.length);
+			String strVal = args[args.length - 1];
+			String no = strVal.substring(strVal.lastIndexOf("t")+1, strVal.length());
+			rowCount = Integer.parseInt(no);
+			logger.info(" :: ARGS -- > " + args.length);
 			logger.info("FILE PATH : '" + filePath + "'" +" ROW COUNT-->"+rowCount);
 		}
 
