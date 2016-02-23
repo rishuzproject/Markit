@@ -131,3 +131,9 @@
 19 Feb 2016 13:20:56 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'D:\CDS_RiskCalkkcs.xlsm'
 19 Feb 2016 13:20:56 [AWT-EventQueue-0] INFO  org.cerrid.main.MarkitHubUI  - Initializing App
 19 Feb 2016 13:20:56 [AWT-EventQueue-0] INFO  org.cerrid.Intialize.PropertiesUtility  - Reading Property File 
+19 Feb 2016 14:19:46 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS2
+19 Feb 2016 14:26:24 [main] INFO  org.cerrid.main.MarkitHubUI  -  :: ARGS3
+19 Feb 2016 14:26:25 [main] INFO  org.cerrid.main.MarkitHubUI  - FILE PATH : 'D:\ABC CBD\CDS_RiskCalkkcs.xlsm' ROW COUNT-->4
+22 Feb 2016 16:36:09 [main] INFO  org.cerrid.main.MarkitMain  -  LOOP -->D:\ABC
+22 Feb 2016 16:36:09 [main] INFO  org.cerrid.main.MarkitMain  -  LOOP -->CBD\CDS_RiskCalkkcs.xlsm
+22 Feb 2016 16:36:09 [main] INFO  org.cerrid.main.MarkitMain  -  LOOP -->count4

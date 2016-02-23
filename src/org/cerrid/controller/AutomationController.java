@@ -13,7 +13,7 @@ import org.cerrid.webAutomation.TestClass;
 public class AutomationController {
 	static Logger logger = Logger.getLogger(AutomationController.class);
 
-	public Map<String, String> controller(String username, String password, String filePath, int entryCount) {
+	public Map<String, String> automate(String username, String password, String filePath, int entryCount) {
 		logger.info(":: Entered in controller ");
 		Map<String, String> responseMap = new HashMap<>();
 		try {
@@ -37,7 +37,7 @@ public class AutomationController {
 
 	public static void main(String[] args) {
 		AutomationController automationController = new AutomationController();
-		automationController.controller("bh-tamukherjee", "Tower377@$*",
+		automationController.automate("bh-tamukherjee", "Tower377@$*",
 				"D:\\Anshu\\Downloads\\ms\\CDS_RiskCalcs_UD.xlsm", 4);
 	}
 }
