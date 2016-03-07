@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -95,17 +94,7 @@ public class TestClass {
 
 	public void changePage() {
 		WebDriverWait wait = new WebDriverWait(driver, 50);
-
-//		((JavascriptExecutor) driver).executeScript("$('.jspContainer').scrollTop(420);");
-//		WebElement element = driver.findElement(By.cssSelector("div.hub-dock-sprite:nth-child(13)"));
-//		while(!element.isDisplayed()) {
-//			((JavascriptExecutor) driver).executeScript("$('.jspContainer').scrollTop(420);");
-//			element = driver.findElement(By.cssSelector("div.hub-dock-sprite:nth-child(13)"));
-//		}
-//		element.click();
-		
 		driver.get("https://beta.hub.com/?compatibility=8&openprovider=UXS#/provider");
-
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(WebSiteConstants.SECOND_IFRAME_ID)));

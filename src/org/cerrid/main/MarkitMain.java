@@ -37,8 +37,8 @@ public class MarkitMain {
 			logger.info(" :: Calling Controller with arguments ");
 			try {
 				controller.automate(userName, password, filePath.toString(), entryCount);
-				Desktop dt = Desktop.getDesktop();
-				dt.open(new File(filePath.toString()));
+//				Desktop dt = Desktop.getDesktop();
+//				dt.open(new File(filePath.toString()));
 			} catch (Exception e) {
 				logger.error(e);
 			}
@@ -47,5 +47,6 @@ public class MarkitMain {
 			logger.info(" :: Error "
 					+ "No Argument found in argument List, Please provide required arguments space separated while running jar");
 		}
+		System.exit(1);
 	}
 }
