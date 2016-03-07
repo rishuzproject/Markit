@@ -96,31 +96,27 @@ public class TestClass {
 	public void changePage() {
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 
-		((JavascriptExecutor) driver).executeScript("$('.jspContainer').scrollTop(420);");
-		String str = "div.hub-dock-sprite:nth-child(12)";
-
-		WebElement element = driver.findElement(By.cssSelector(str));
-		element = driver.findElement(By.cssSelector("div.hub-dock-sprite:nth-child(12)"));
-		element.click();
+//		((JavascriptExecutor) driver).executeScript("$('.jspContainer').scrollTop(420);");
+//		WebElement element = driver.findElement(By.cssSelector("div.hub-dock-sprite:nth-child(13)"));
+//		while(!element.isDisplayed()) {
+//			((JavascriptExecutor) driver).executeScript("$('.jspContainer').scrollTop(420);");
+//			element = driver.findElement(By.cssSelector("div.hub-dock-sprite:nth-child(13)"));
+//		}
+//		element.click();
+		
+		driver.get("https://beta.hub.com/?compatibility=8&openprovider=UXS#/provider");
 
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
-		try {
-			Thread.sleep(15000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-			logger.info(" :: Interrupted -" + e);
-		}
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='content-panel']/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr/td/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td/div/div/img")));
+		driver.switchTo().defaultContent();
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
 		List<WebElement> navItems = null;
 		while (navItems == null || navItems.size() < 2) {
 			wait.until(ExpectedConditions.elementToBeClickable(By.className("MNavigationBarLabelSmall")));
 			navItems = driver.findElements(By.className("MNavigationBarLabelSmall"));
-		}
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
 		}
 		wait.until(ExpectedConditions.elementToBeClickable(navItems.get(2)));
 		navItems.get(2).click();
@@ -157,10 +153,8 @@ public class TestClass {
 				
 				WebElement calculateBtn = driver.findElement(By.id(WebSiteConstants.CALCULATE_BUTTON_ID));
 				calculateBtn.click();
-				try {
-					Thread.sleep(4000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
+				while(!calculateBtn.isEnabled()){
+					
 				}
 				WebElement spreadValueElement = driver.findElement(By.xpath(WebSiteConstants.SPREAD_VALUE_XPATH));
 				WebElement walValueElement = driver.findElement(By.xpath(WebSiteConstants.WAL_VALUE_XPATH));

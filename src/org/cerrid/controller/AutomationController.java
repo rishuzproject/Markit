@@ -1,5 +1,7 @@
 package org.cerrid.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +19,7 @@ public class AutomationController {
 		logger.info(":: Entered in controller ");
 		Map<String, String> responseMap = new HashMap<>();
 		try {
+			//AutomationController.extractDrivers(filePath);
 			List<DataFields> dataList = new CopyValues().copyDataFromExcel(filePath, entryCount);
 			TestClass testClass = new TestClass(username, password, dataList);
 			testClass.login();
@@ -38,6 +41,21 @@ public class AutomationController {
 	public static void main(String[] args) {
 		AutomationController automationController = new AutomationController();
 		automationController.automate("bh-tamukherjee", "Tower377@$*",
-				"D:\\Anshu\\Downloads\\ms\\CDS_RiskCalcs_UD.xlsm", 4);
+				"D:\\MarkIt(Op)Test\\CDS_RiskCalcs_UD_ORG(1).xlsm", 4);
+	}
+
+	public static void extractDrivers(String filePath) {
+		File file = new File(filePath);
+		String directoryPath = file.getParent();
+		String part1 = "pushd " + directoryPath;
+		String part2 = "jar xf MarkIt-Hub.jar chromedriver.exe";
+		String part3 = "jar xf MarkIt-Hub.jar IEDriverServer.exe";
+
+		try {
+			Process p = Runtime.getRuntime()
+					.exec("cmd /c start cmd.exe /c \"" + part1 + " && " + part2 + "&&" + part3 + " && echo end\"");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
