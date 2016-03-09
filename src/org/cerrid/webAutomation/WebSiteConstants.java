@@ -45,4 +45,16 @@ public class WebSiteConstants {
 	public static final String SHEET_1 = "Sheet1";
 
 	public static final String INDEX_COLUMN_NAME = "Index";
+	
+	public static final String REDIRECT_URL = "https://beta.hub.com/?compatibility=8&openprovider=UXS#/provider";
+    
+    public static final String WAIT_IMAGE_XPATH = "//*[@id='content-panel']/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr/td/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td/div/div/img";
+    
+    public static final String TAB_CLASS_NAME = "MNavigationBarLabelSmall";
+    
+    public static final String LOGOUT_DROPDOWN = "blueAuctionMenuButton";
+     
+    public static final String LOGOUT_BUTTON = "gwt-Anchor";
+    
+    public static final String LOGIN_BUTTON = "loginButton";
 }

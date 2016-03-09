@@ -5,11 +5,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,33 +14,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class TestClass {
 
 	static Logger logger = Logger.getLogger(TestClass.class);
-	private WebDriver driver;
+	private HtmlUnitDriver driver;
 	private String username;
 	private String password;
 	private List<DataFields> dataFieldsList;
 
 	public TestClass(String username, String password, List<DataFields> dataFieldsList) {
-		boolean driverFound = false;
-		try {
-			System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-			driver = new ChromeDriver();
-			driverFound = true;
-		} catch (Exception e) {
-			logger.error(e);
-		}
-		if (!driverFound) {
-			driver = new FirefoxDriver();
-			driverFound = true;
-		}
-		if (!driverFound) {
-			try {
-				System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
-				driver = new InternetExplorerDriver();
-				driverFound = true;
-			} catch (Exception e) {
-				logger.error(e);
-			}
-		}
+		driver = new HtmlUnitDriver(true);
 		this.dataFieldsList = dataFieldsList;
 		this.username = username;
 		this.password = password;
@@ -57,11 +34,11 @@ public class TestClass {
 		this.dataFieldsList = dataFieldsList;
 	}
 
-	public WebDriver getDriver() {
+	public HtmlUnitDriver getDriver() {
 		return driver;
 	}
 
-	public void setDriver(WebDriver driver) {
+	public void setDriver(HtmlUnitDriver driver) {
 		this.driver = driver;
 	}
 
@@ -82,35 +59,36 @@ public class TestClass {
 	}
 
 	public void login() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get("https://beta.hub.com/");
-		WebElement userNameElement = driver.findElement(By.id(WebSiteConstants.USER_NAME_ELEMENT_ID));
-		userNameElement.sendKeys(username);
-		WebElement passwordElement = driver.findElement(By.id(WebSiteConstants.PASSWORD_ELEMENT_ID));
-		passwordElement.sendKeys(password);
-		passwordElement.submit();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.get(WebSiteConstants.url);
+        WebElement userNameElement = driver.findElement(By.id(WebSiteConstants.USER_NAME_ELEMENT_ID));
+        userNameElement.sendKeys(username);
+        WebElement passwordElement = driver.findElement(By.id(WebSiteConstants.PASSWORD_ELEMENT_ID));
+        passwordElement.sendKeys(password);
+        WebElement submitElement = driver.findElement(By.id(WebSiteConstants.LOGIN_BUTTON));
+        // passwordElement.submit();
+        submitElement.click();
 	}
 
 	public void changePage() {
-		WebDriverWait wait = new WebDriverWait(driver, 50);
-		driver.get("https://beta.hub.com/?compatibility=8&openprovider=UXS#/provider");
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
+		 WebDriverWait wait = new WebDriverWait(driver, 50);
+         driver.get(WebSiteConstants.REDIRECT_URL);
+         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
+         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
+         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(WebSiteConstants.WAIT_IMAGE_XPATH)));
+         driver.switchTo().defaultContent();
+         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
+         List<WebElement> navItems = null;
+         while (navItems == null || navItems.size() < 2) {
+                 wait.until(ExpectedConditions.elementToBeClickable(By.className(WebSiteConstants.TAB_CLASS_NAME)));
+                 navItems = driver.findElements(By.className(WebSiteConstants.TAB_CLASS_NAME));
+         }
+         wait.until(ExpectedConditions.elementToBeClickable(navItems.get(2)));
+         navItems.get(2).click();
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='content-panel']/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr/td/div/table/tbody/tr/td[2]/table/tbody/tr[2]/td/div/table/tbody/tr[1]/td/div/div/img")));
-		driver.switchTo().defaultContent();
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
-		List<WebElement> navItems = null;
-		while (navItems == null || navItems.size() < 2) {
-			wait.until(ExpectedConditions.elementToBeClickable(By.className("MNavigationBarLabelSmall")));
-			navItems = driver.findElements(By.className("MNavigationBarLabelSmall"));
-		}
-		wait.until(ExpectedConditions.elementToBeClickable(navItems.get(2)));
-		navItems.get(2).click();
-
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
+         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.className(WebSiteConstants.SECOND_IFRAME_ID)));
 	}
 
 	public void calculateValues() {
@@ -165,14 +143,15 @@ public class TestClass {
 
 	public void logout() {
 		WebDriverWait wait = new WebDriverWait(driver, 50);
-		driver.switchTo().defaultContent();
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
-		WebElement markItElement = wait
-				.until(ExpectedConditions.elementToBeClickable(By.className("blueAuctionMenuButton")));
-		markItElement.click();
-		WebElement logoutElement = wait.until(ExpectedConditions.elementToBeClickable(By.className("gwt-Anchor")));
-		logoutElement.click();
-		driver.quit();
+        driver.switchTo().defaultContent();
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id(WebSiteConstants.FIRST_IFRAME_ID)));
+        WebElement markItElement = wait
+                        .until(ExpectedConditions.elementToBeClickable(By.className(WebSiteConstants.LOGOUT_DROPDOWN)));
+        markItElement.click();
+        WebElement logoutElement = wait
+                        .until(ExpectedConditions.elementToBeClickable(By.className(WebSiteConstants.LOGOUT_BUTTON)));
+        logoutElement.click();
+        driver.quit();
 	}
 
 }
