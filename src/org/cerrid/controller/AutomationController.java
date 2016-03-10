@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.cerrid.excelAutomation.CopyValues;
 import org.cerrid.excelAutomation.SetCalculatedValues;
@@ -18,10 +19,11 @@ public class AutomationController {
 	public Map<String, String> automate(String username, String password, String filePath, int entryCount) {
 		logger.info(":: Entered in controller ");
 		Map<String, String> responseMap = new HashMap<>();
+		TestClass testClass = null;
 		try {
 			//AutomationController.extractDrivers(filePath);
 			List<DataFields> dataList = new CopyValues().copyDataFromExcel(filePath, entryCount);
-			TestClass testClass = new TestClass(username, password, dataList);
+			testClass = new TestClass(username, password, dataList);
 			testClass.login();
 			testClass.changePage();
 			testClass.calculateValues();
@@ -31,10 +33,17 @@ public class AutomationController {
 			responseMap.put("status", "success");
 			return responseMap;
 		} catch (Exception e) {
-			e.printStackTrace();
-			responseMap.put("status", "fail");
-			responseMap.put("reason", e.toString());
-			return responseMap;
+            e.printStackTrace();
+            logger.info(" --------------------------EXCEPTION - START----------------------- ");
+            logger.log(Level.FATAL, e.getMessage(), e);
+            logger.info(" --------------------------EXCEPTION - END----------------------- ");
+            responseMap.put("status", "fail");
+            responseMap.put("reason", e.toString());
+            return responseMap;
+		} finally {
+            if (null != testClass)
+            	logger.info("Log out ..");
+             	testClass.logout();
 		}
 	}
 

@@ -3,6 +3,7 @@ package org.cerrid.webAutomation;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -60,15 +61,24 @@ public class TestClass {
 
 	public void login() {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        driver.get(WebSiteConstants.url);
-        WebElement userNameElement = driver.findElement(By.id(WebSiteConstants.USER_NAME_ELEMENT_ID));
-        userNameElement.sendKeys(username);
-        WebElement passwordElement = driver.findElement(By.id(WebSiteConstants.PASSWORD_ELEMENT_ID));
-        passwordElement.sendKeys(password);
-        WebElement submitElement = driver.findElement(By.id(WebSiteConstants.LOGIN_BUTTON));
-        // passwordElement.submit();
-        submitElement.click();
+		driver.manage().window().maximize();
+		WebElement userNameElement = null;
+		int trying = 0;
+		while (userNameElement == null && trying < 10) {
+			try {
+				driver.get(WebSiteConstants.url);
+				userNameElement = driver.findElement(By.id(WebSiteConstants.USER_NAME_ELEMENT_ID));
+				userNameElement.sendKeys(username);
+				WebElement passwordElement = driver.findElement(By.id(WebSiteConstants.PASSWORD_ELEMENT_ID));
+				passwordElement.sendKeys(password);
+				WebElement submitElement = driver.findElement(By.id(WebSiteConstants.LOGIN_BUTTON));
+				// passwordElement.submit();
+				submitElement.click();
+			} catch (Exception e) {
+				logger.log(Level.INFO, "Could not Login Trying Again " + trying);
+				trying++;
+			}
+		}
 	}
 
 	public void changePage() {
