@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -61,7 +62,7 @@ public class TestClass {
 
 	public void login() {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+		driver.manage().window().setPosition(new Point(-2000, 0));
 		WebElement userNameElement = null;
 		int trying = 0;
 		while (userNameElement == null && trying < 10) {
