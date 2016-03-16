@@ -7,8 +7,11 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,13 +19,35 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class TestClass {
 
 	static Logger logger = Logger.getLogger(TestClass.class);
-	private HtmlUnitDriver driver;
+	private WebDriver driver;
 	private String username;
 	private String password;
 	private List<DataFields> dataFieldsList;
 
 	public TestClass(String username, String password, List<DataFields> dataFieldsList) {
-		driver = new HtmlUnitDriver(true);
+		boolean driverFound = false;
+        try {
+            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+            this.driver = new ChromeDriver();
+            driverFound = true;
+        }
+        catch (Exception e) {
+            logger.error((Object)e);
+        }
+        if (!driverFound) {
+            this.driver = new FirefoxDriver();
+            driverFound = true;
+        }
+        if (!driverFound) {
+            try {
+                System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
+                this.driver = new InternetExplorerDriver();
+                driverFound = true;
+            }
+            catch (Exception e) {
+                logger.error((Object)e);
+            }
+        }
 		this.dataFieldsList = dataFieldsList;
 		this.username = username;
 		this.password = password;
@@ -36,11 +61,11 @@ public class TestClass {
 		this.dataFieldsList = dataFieldsList;
 	}
 
-	public HtmlUnitDriver getDriver() {
+	public WebDriver getDriver() {
 		return driver;
 	}
 
-	public void setDriver(HtmlUnitDriver driver) {
+	public void setDriver(WebDriver driver) {
 		this.driver = driver;
 	}
 
